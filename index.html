@@ -1,685 +1,736 @@
-<!--
-MIT License
-
-Copyright (c) 2026 oleh Moch Akmal Almagribi
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
--->
-
 <!doctype html>
 <html lang="id" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Moch Akmal Almagribi - Portofolio</title>
 
-    <!-- Meta Tags SEO -->
+    <!-- Google Search Console Verification -->
+    <meta
+      name="google-site-verification"
+      content="1C8iGQDCnX7BjjfJqLIJqSzwfNIYUz9J8Mny1yV4klM"
+    />
+
+    <!-- SEO Meta Tags -->
+    <title>Moch Akmal Almagribi - Full-Stack Web & AI Developer</title>
     <meta
       name="description"
-      content="Portofolio Moch Akmal Almagribi - Full-Stack Web & AI Developer spesialis Computer Vision dan AI."
+      content="Portofolio resmi Moch Akmal Almagribi, Developer di balik Gemini-MathSolver. Berpengalaman dalam pembangunan website modern berbasis Computer Vision dan AI."
+    />
+    <meta
+      name="keywords"
+      content="Moch Akmal Almagribi, Web Developer, AI Developer, Computer Vision, Portfolio, Gemini-MathSolver, Software Engineer"
     />
     <meta name="author" content="Moch Akmal Almagribi" />
     <meta name="robots" content="index, follow" />
+
+    <!-- Canonical URL -->
+    <link
+      rel="canonical"
+      href="https://akmalcreate.github.io/moch-akmal-almagribi-portofolio/"
+    />
+
+    <!-- Open Graph / Social Media Meta Tags -->
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:title"
+      content="Moch Akmal Almagribi - Full-Stack Web & AI Developer"
+    />
+    <meta
+      property="og:description"
+      content="Developer di balik Gemini-MathSolver. Berpengalaman membangun website modern berbasis Computer Vision dan AI."
+    />
+    <meta property="og:image" content="assets/images/website-preview.jpg" />
+    <meta
+      property="og:url"
+      content="https://akmalcreate.github.io/moch-akmal-almagribi-portofolio/"
+    />
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Moch Akmal Almagribi - Full-Stack Web & AI Developer"
+    />
+    <meta
+      name="twitter:description"
+      content="Developer di balik Gemini-MathSolver. Berpengalaman membangun website modern berbasis Computer Vision dan AI."
+    />
+    <meta name="twitter:image" content="assets/images/website-preview.jpg" />
+
+    <!-- Sitemap Link -->
+    <link
+      rel="sitemap"
+      type="application/xml"
+      title="Sitemap"
+      href="/sitemap.xml"
+    />
 
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
       tailwind.config = {
         darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              brand: {
+                50: "#f0f9ff",
+                100: "#e0f2fe",
+                500: "#0ea5e9",
+                600: "#0284c7",
+                700: "#0369a1",
+              },
+            },
+          },
+        },
       };
     </script>
 
-    <!-- Font Plus Jakarta Sans & AOS Animation -->
+    <!-- Font Awesome Icons -->
     <link
-      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
       rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 
-    <style>
-      body {
-        font-family: "Plus Jakarta Sans", sans-serif;
-      }
-    </style>
+    <!-- AOS Animation Library CDN -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   </head>
   <body
-    class="bg-slate-50 text-slate-900 dark:bg-slate-900 dark:text-slate-100 transition-colors duration-300 antialiased"
+    class="bg-gray-50 text-gray-800 dark:bg-gray-900 dark:text-gray-100 transition-colors duration-300 antialiased font-sans"
   >
-    <!-- HEADER & NAVBAR SEMANTIK -->
+    <!-- NAVBAR -->
     <header
-      class="fixed top-0 left-0 w-full z-50 bg-white/80 dark:bg-slate-900/80 backdrop-blur-md border-b border-slate-200 dark:border-slate-800"
+      class="fixed w-full top-0 z-50 bg-white/80 dark:bg-gray-900/80 backdrop-blur-md border-b border-gray-200 dark:border-gray-800"
     >
-      <div
-        class="max-w-6xl mx-auto px-4 sm:px-6 py-4 flex justify-between items-center"
-      >
-        <a
-          href="#"
-          class="text-lg sm:text-xl font-bold tracking-wider text-indigo-600 dark:text-indigo-400"
-          >DEV.PORTFOLIO</a
-        >
-
-        <nav class="flex items-center gap-4 sm:gap-6">
-          <ul class="hidden md:flex gap-6 font-medium text-sm">
-            <li>
-              <a
-                href="#home"
-                class="hover:text-indigo-600 dark:hover:text-indigo-400 transition"
-                >Home</a
-              >
-            </li>
-            <li>
-              <a
-                href="#projects"
-                class="hover:text-indigo-600 dark:hover:text-indigo-400 transition"
-                >Projects</a
-              >
-            </li>
-            <li>
-              <a
-                href="#contact"
-                class="hover:text-indigo-600 dark:hover:text-indigo-400 transition"
-                >Contact</a
-              >
-            </li>
-          </ul>
-
-          <!-- Tombol Dark Mode -->
-          <button
-            id="theme-toggle"
-            aria-label="Toggle Theme"
-            class="p-2 rounded-lg bg-slate-100 dark:bg-slate-800 text-amber-500 dark:text-indigo-400 focus:outline-none transition"
-          >
-            <svg
-              id="theme-toggle-light-icon"
-              class="hidden w-5 h-5"
-              fill="currentColor"
-              viewBox="0 0 20 20"
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-16">
+          <!-- Logo / Nama -->
+          <div class="flex-shrink-0">
+            <a
+              href="#"
+              class="text-xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent"
             >
-              <path
-                d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 14.121l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 111.414 1.414zm-.707-11.314a1 1 0 00-1.414 1.414l.707.707a1 1 0 001.414-1.414l-.707-.707zM6 10a1 1 0 01-1-1v1a1 1 0 110-2h1a1 1 0 110 2H6z"
-              ></path>
-            </svg>
-            <svg
-              id="theme-toggle-dark-icon"
-              class="hidden w-5 h-5"
-              fill="currentColor"
-              viewBox="0 0 20 20"
-            >
-              <path
-                d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"
-              ></path>
-            </svg>
-          </button>
-        </nav>
-      </div>
-    </header>
+              Akmal Almagribi
+            </a>
+          </div>
 
-    <!-- MAIN CONTENT -->
-    <main>
-      <!-- HERO SECTION -->
-      <section
-        id="home"
-        class="min-h-screen flex items-center justify-center pt-24 pb-12 px-4 sm:px-6"
-      >
-        <div
-          class="max-w-4xl text-center"
-          data-aos="zoom-in"
-          data-aos-duration="1000"
-        >
-          <span
-            class="inline-block px-3 py-1 text-xs font-semibold tracking-wider text-indigo-600 bg-indigo-100 dark:bg-indigo-900/50 dark:text-indigo-300 rounded-full uppercase"
-            >Available for Hire</span
-          >
-          <h1
-            class="text-3xl sm:text-5xl md:text-6xl font-bold mt-4 tracking-tight leading-tight"
-          >
-            Hi, I'm
-            <span class="text-indigo-600 dark:text-indigo-400"
-              >Moch Akmal Almagribi</span
+          <!-- Navigation Links -->
+          <nav class="hidden md:flex space-x-8 items-center">
+            <a
+              href="#about"
+              class="hover:text-blue-600 dark:hover:text-blue-400 transition"
+              >Tentang</a
             >
-          </h1>
-          <p
-            class="text-lg sm:text-xl md:text-2xl font-medium mt-2 text-slate-600 dark:text-slate-400"
-          >
-            Full-Stack Web & AI Developer
-          </p>
-          <p
-            class="mt-6 text-sm sm:text-base text-slate-500 max-w-xl mx-auto leading-relaxed dark:text-slate-400 px-2 sm:px-0"
-          >
-            Developer di balik Gemini-MathSolver—website kalkulator matematika
-            berbasis AI. Saya berpengalaman membangun website modern, cerdas,
-            dan responsif yang mengintegrasikan teknologi Computer Vision serta
-            AI untuk menyelesaikan berbagai tantangan digital Anda.
-          </p>
-          <div class="mt-8 flex flex-wrap justify-center gap-4">
             <a
               href="#projects"
-              class="w-full sm:w-auto px-6 py-3 bg-indigo-600 text-white rounded-xl font-medium hover:bg-indigo-700 transition shadow-lg shadow-indigo-600/20 text-center"
-              >Lihat Project</a
+              class="hover:text-blue-600 dark:hover:text-blue-400 transition"
+              >Portofolio Projek</a
             >
             <a
               href="#contact"
-              class="w-full sm:w-auto px-6 py-3 border border-slate-300 dark:border-slate-700 rounded-xl font-medium hover:bg-slate-100 dark:hover:bg-slate-800 transition text-center"
-              >Hubungi Saya</a
+              class="hover:text-blue-600 dark:hover:text-blue-400 transition"
+              >Kontak</a
             >
+
+            <!-- Theme Toggle Button -->
+            <button
+              id="theme-toggle"
+              class="p-2 rounded-lg bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300 hover:ring-2 hover:ring-blue-500 focus:outline-none"
+            >
+              <i
+                id="theme-toggle-dark-icon"
+                class="fas font-solid fa-moon hidden"
+              ></i>
+              <i
+                id="theme-toggle-light-icon"
+                class="fas font-solid fa-sun hidden"
+              ></i>
+            </button>
+          </nav>
+
+          <!-- Mobile Menu Toggle Button -->
+          <div class="flex md:hidden items-center space-x-2">
+            <button
+              id="theme-toggle-mobile"
+              class="p-2 rounded-lg bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300"
+            >
+              <i
+                id="theme-toggle-dark-icon-mobile"
+                class="fas font-solid fa-moon hidden"
+              ></i>
+              <i
+                id="theme-toggle-light-icon-mobile"
+                class="fas font-solid fa-sun hidden"
+              ></i>
+            </button>
+            <button
+              id="mobile-menu-btn"
+              class="p-2 text-gray-600 dark:text-gray-300 focus:outline-none"
+            >
+              <i class="fas fa-bars text-xl"></i>
+            </button>
           </div>
         </div>
-      </section>
+      </div>
 
-      <!-- PROJECTS SECTION -->
-      <section
-        id="projects"
-        class="py-16 sm:py-20 px-4 sm:px-6 bg-slate-100 dark:bg-slate-900/50"
+      <!-- Mobile Menu Dropdown -->
+      <div
+        id="mobile-menu"
+        class="hidden md:hidden bg-white dark:bg-gray-900 border-b border-gray-200 dark:border-gray-800 px-4 pt-2 pb-4 space-y-2"
       >
-        <div class="max-w-6xl mx-auto">
-          <header class="text-center mb-10" data-aos="fade-up">
-            <h2 class="text-2xl sm:text-3xl font-bold">Project Pilihan</h2>
-            <p class="text-sm sm:text-base text-slate-500 mt-2">
-              Demonstrasi proyek Computer Vision, AI, Web Application, dan
-              Galeri Personal.
-            </p>
-          </header>
+        <a
+          href="#about"
+          class="block py-2 hover:text-blue-600 dark:hover:text-blue-400"
+          >Tentang</a
+        >
+        <a
+          href="#projects"
+          class="block py-2 hover:text-blue-600 dark:hover:text-blue-400"
+          >Portofolio Projek</a
+        >
+        <a
+          href="#contact"
+          class="block py-2 hover:text-blue-600 dark:hover:text-blue-400"
+          >Kontak</a
+        >
+      </div>
+    </header>
 
-          <!-- TOMBOL OPSI FILTER -->
-          <nav
-            aria-label="Project Filter"
-            class="flex flex-wrap justify-center gap-2 sm:gap-3 mb-10 sm:mb-12"
-            data-aos="fade-up"
+    <!-- HERO SECTION -->
+    <section
+      id="about"
+      class="pt-32 pb-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-12"
+    >
+      <div class="flex-1 text-center md:text-left" data-aos="fade-right">
+        <span
+          class="px-3 py-1 text-sm font-semibold text-blue-600 dark:text-blue-400 bg-blue-100 dark:bg-blue-900/40 rounded-full inline-block mb-4"
+        >
+          Full-Stack Web & AI Developer
+        </span>
+        <h1
+          class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight mb-6"
+        >
+          Halo, Saya
+          <span
+            class="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent"
+            >Moch Akmal Almagribi</span
           >
+        </h1>
+        <p
+          class="text-lg text-gray-600 dark:text-gray-300 mb-8 max-w-2xl leading-relaxed"
+        >
+          Developer inovatif yang fokus pada pengembangan aplikasi Web Modern,
+          solusi kecerdasan buatan (**AI**), dan sistem pengolahan citra
+          **Computer Vision**. Pengembang di balik platform
+          **Gemini-MathSolver**.
+        </p>
+        <div class="flex flex-wrap justify-center md:justify-start gap-4">
+          <a
+            href="#projects"
+            class="px-6 py-3 rounded-lg bg-blue-600 hover:bg-blue-700 text-white font-medium shadow-lg hover:shadow-blue-500/30 transition"
+          >
+            Lihat Portofolio
+          </a>
+          <a
+            href="#contact"
+            class="px-6 py-3 rounded-lg border border-gray-300 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800 font-medium transition"
+          >
+            Hubungi Saya
+          </a>
+        </div>
+      </div>
+      <div class="flex-1 flex justify-center" data-aos="fade-left">
+        <div
+          class="relative w-64 h-64 sm:w-80 sm:h-80 rounded-2xl overflow-hidden shadow-2xl border-4 border-white dark:border-gray-800"
+        >
+          <img
+            src="assets/images/foto1.jpg"
+            alt="Moch Akmal Almagribi Profile"
+            class="w-full h-full object-cover"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS & GALLERY SECTION -->
+    <section id="projects" class="py-20 bg-gray-100/50 dark:bg-gray-800/50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12" data-aos="fade-up">
+          <h2 class="text-3xl font-bold sm:text-4xl mb-4">
+            Portofolio & Galeri
+          </h2>
+          <p class="text-gray-600 dark:text-gray-400">
+            Eksplorasi proyek Computer Vision, Website, dan galeri personal
+            saya.
+          </p>
+
+          <!-- FILTER BUTTONS -->
+          <div class="flex flex-wrap justify-center gap-3 mt-8">
             <button
-              onclick="filterProjects('all')"
-              class="filter-btn px-4 py-2 text-xs sm:text-sm font-semibold rounded-xl bg-indigo-600 text-white transition active-filter"
               data-filter="all"
+              class="filter-btn active px-5 py-2 rounded-full font-medium bg-blue-600 text-white transition"
             >
               Semua
             </button>
             <button
-              onclick="filterProjects('cv-ai')"
-              class="filter-btn px-4 py-2 text-xs sm:text-sm font-semibold rounded-xl bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-indigo-50 dark:hover:bg-slate-700 border border-slate-200 dark:border-slate-700 transition"
-              data-filter="cv-ai"
+              data-filter="cv"
+              class="filter-btn px-5 py-2 rounded-full font-medium bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800 transition"
             >
               Computer Vision & AI
             </button>
             <button
-              onclick="filterProjects('website')"
-              class="filter-btn px-4 py-2 text-xs sm:text-sm font-semibold rounded-xl bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-indigo-50 dark:hover:bg-slate-700 border border-slate-200 dark:border-slate-700 transition"
-              data-filter="website"
+              data-filter="web"
+              class="filter-btn px-5 py-2 rounded-full font-medium bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800 transition"
             >
-              Website Projek
+              Website Project
             </button>
             <button
-              onclick="filterProjects('personal')"
-              class="filter-btn px-4 py-2 text-xs sm:text-sm font-semibold rounded-xl bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-indigo-50 dark:hover:bg-slate-700 border border-slate-200 dark:border-slate-700 transition"
               data-filter="personal"
+              class="filter-btn px-5 py-2 rounded-full font-medium bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800 transition"
             >
               Foto Personal
             </button>
-          </nav>
-
-          <!-- GRID PROJEK (RESPONSIF HP, TABLET, LAPTOP) -->
-          <div
-            class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8"
-          >
-            <!-- CARD 1: COMPUTER VISION & AI (3 VIDEO DALAM 1 CARD) -->
-            <article
-              class="project-card cv-ai bg-white dark:bg-slate-800 rounded-2xl overflow-hidden shadow-md border border-slate-200 dark:border-slate-700/50 flex flex-col justify-between"
-              data-aos="fade-up"
-              data-aos-delay="100"
-            >
-              <div>
-                <div class="p-4 space-y-3 bg-black/5 dark:bg-slate-900/40">
-                  <figure
-                    class="relative w-full h-36 bg-black rounded-lg overflow-hidden"
-                  >
-                    <video
-                      class="w-full h-full object-cover"
-                      controls
-                      controlsList="nodownload"
-                      oncontextmenu="return false;"
-                    >
-                      <source src="Hand Gesture.mp4" type="video/mp4" />
-                    </video>
-                  </figure>
-                  <figure
-                    class="relative w-full h-36 bg-black rounded-lg overflow-hidden"
-                  >
-                    <video
-                      class="w-full h-full object-cover"
-                      controls
-                      controlsList="nodownload"
-                      oncontextmenu="return false;"
-                    >
-                      <source
-                        src="Driver Drowsiness Detection System.mp4"
-                        type="video/mp4"
-                      />
-                    </video>
-                  </figure>
-                  <figure
-                    class="relative w-full h-36 bg-black rounded-lg overflow-hidden"
-                  >
-                    <video
-                      class="w-full h-full object-cover"
-                      controls
-                      controlsList="nodownload"
-                      oncontextmenu="return false;"
-                    >
-                      <source
-                        src="Object Detection and Alert System.mp4"
-                        type="video/mp4"
-                      />
-                    </video>
-                  </figure>
-                </div>
-                <div class="p-5 sm:p-6">
-                  <h3 class="text-lg sm:text-xl font-bold mb-2">
-                    Computer Vision & AI Systems Showcase
-                  </h3>
-                  <p
-                    class="text-slate-500 dark:text-slate-400 text-xs sm:text-sm leading-relaxed mb-4"
-                  >
-                    Kumpulan 3 sistem AI terintegrasi: Hand Gesture Shape
-                    Recognition, Driver Drowsiness Detection System, dan Object
-                    Detection Alert System berbasis real-time.
-                  </p>
-                </div>
-              </div>
-              <footer class="px-5 sm:px-6 pb-5 sm:pb-6">
-                <div class="flex gap-2 flex-wrap">
-                  <span
-                    class="px-2 py-1 bg-slate-100 dark:bg-slate-700 text-xs rounded"
-                    >Python</span
-                  >
-                  <span
-                    class="px-2 py-1 bg-slate-100 dark:bg-slate-700 text-xs rounded"
-                    >OpenCV</span
-                  >
-                  <span
-                    class="px-2 py-1 bg-slate-100 dark:bg-slate-700 text-xs rounded"
-                    >MediaPipe</span
-                  >
-                  <span
-                    class="px-2 py-1 bg-slate-100 dark:bg-slate-700 text-xs rounded"
-                    >YOLO</span
-                  >
-                </div>
-              </footer>
-            </article>
-
-            <!-- CARD 2: OPSI WEBSITE (SHOWCASE GAMBAR PREVIEW WEBSITE) -->
-            <article
-              class="project-card website bg-white dark:bg-slate-800 rounded-2xl overflow-hidden shadow-md border border-slate-200 dark:border-slate-700/50 flex flex-col justify-between"
-              data-aos="fade-up"
-              data-aos-delay="200"
-            >
-              <div>
-                <!-- SRC GAMBAR PREVIEW WEBSITE DITANDAI -->
-                <figure
-                  class="relative w-full h-64 sm:h-72 bg-slate-200 dark:bg-slate-700 overflow-hidden"
-                >
-                  <img
-                    src="mtk.png"
-                    alt="Gemini-MathSolver Website Preview"
-                    class="w-full h-full object-cover hover:scale-105 transition duration-500"
-                    onerror="
-                      this.src =
-                        'https://via.placeholder.com/600x400?text=Gambar+Website+Preview'
-                    "
-                  />
-                </figure>
-                <div class="p-5 sm:p-6">
-                  <h3 class="text-lg sm:text-xl font-bold mb-2">
-                    Gemini-MathSolver & Modern Web Apps
-                  </h3>
-                  <p
-                    class="text-slate-500 dark:text-slate-400 text-xs sm:text-sm leading-relaxed mb-4"
-                  >
-                    Platform kalkulator matematika interaktif berbasis AI serta
-                    aplikasi web modern yang responsif, cepat, dan terintegrasi
-                    dengan API mutakhir.
-                  </p>
-                </div>
-              </div>
-              <footer class="px-5 sm:px-6 pb-5 sm:pb-6">
-                <div class="flex gap-2 flex-wrap">
-                  <span
-                    class="px-2 py-1 bg-slate-100 dark:bg-slate-700 text-xs rounded"
-                    >HTML5 / Tailwind</span
-                  >
-                  <span
-                    class="px-2 py-1 bg-slate-100 dark:bg-slate-700 text-xs rounded"
-                    >JavaScript</span
-                  >
-                  <span
-                    class="px-2 py-1 bg-slate-100 dark:bg-slate-700 text-xs rounded"
-                    >Gemini AI API</span
-                  >
-                </div>
-              </footer>
-            </article>
-
-            <!-- CARD 3: OPSI FOTO FOTO PERSONAL (5 FOTO DITANDAI SRC-NYA) -->
-            <article
-              class="project-card personal bg-white dark:bg-slate-800 rounded-2xl overflow-hidden shadow-md border border-slate-200 dark:border-slate-700/50 flex flex-col justify-between"
-              data-aos="fade-up"
-              data-aos-delay="300"
-            >
-              <div>
-                <div class="p-3 bg-slate-100 dark:bg-slate-900/50 space-y-2">
-                  <!-- FOTO 1 (Foto Utama / Besar) -->
-                  <figure
-                    class="relative h-36 bg-slate-300 dark:bg-slate-700 rounded-lg overflow-hidden"
-                  >
-                    <img
-                      src="akmal1.png"
-                      class="w-full h-full object-cover hover:scale-105 transition duration-300"
-                      onerror="
-                        this.src =
-                          'https://via.placeholder.com/400x200?text=Foto+Personal+1'
-                      "
-                    />
-                  </figure>
-
-                  <!-- 4 FOTO KECIL -->
-                  <div class="grid grid-cols-2 gap-2">
-                    <!-- FOTO 2 -->
-                    <figure
-                      class="relative h-24 bg-slate-300 dark:bg-slate-700 rounded-lg overflow-hidden"
-                    >
-                      <img
-                        src="akmal2.png"
-                        alt="Foto Personal 2"
-                        class="w-full h-full object-cover hover:scale-105 transition duration-300"
-                        onerror="
-                          this.src =
-                            'https://via.placeholder.com/200?text=Foto+Personal+2'
-                        "
-                      />
-                    </figure>
-                    <!-- FOTO 3 -->
-                    <figure
-                      class="relative h-24 bg-slate-300 dark:bg-slate-700 rounded-lg overflow-hidden"
-                    >
-                      <img
-                        src="akmal3.png"
-                        alt="Foto Personal 3"
-                        class="w-full h-full object-cover hover:scale-105 transition duration-300"
-                        onerror="
-                          this.src =
-                            'https://via.placeholder.com/200?text=Foto+Personal+3'
-                        "
-                      />
-                    </figure>
-                    <!-- FOTO 4 -->
-                    <figure
-                      class="relative h-24 bg-slate-300 dark:bg-slate-700 rounded-lg overflow-hidden"
-                    >
-                      <img
-                        src="akmal4.png"
-                        alt="Foto Personal 4"
-                        class="w-full h-full object-cover hover:scale-105 transition duration-300"
-                        onerror="
-                          this.src =
-                            'https://via.placeholder.com/200?text=Foto+Personal+4'
-                        "
-                      />
-                    </figure>
-                    <!-- FOTO 5 -->
-                    <figure
-                      class="relative h-24 bg-slate-300 dark:bg-slate-700 rounded-lg overflow-hidden"
-                    >
-                      <img
-                        src="akmal5.png"
-                        alt="Foto Personal 5"
-                        class="w-full h-full object-cover hover:scale-105 transition duration-300"
-                        onerror="
-                          this.src =
-                            'https://via.placeholder.com/200?text=Foto+Personal+5'
-                        "
-                      />
-                    </figure>
-                  </div>
-                </div>
-                <div class="p-5 sm:p-6">
-                  <h3 class="text-lg sm:text-xl font-bold mb-2">
-                    Personal Gallery & Activities
-                  </h3>
-                  <p
-                    class="text-slate-500 dark:text-slate-400 text-xs sm:text-sm leading-relaxed mb-4"
-                  >
-                    Dokumentasi kegiatan profesional, project development, serta
-                    aktivitas personal Moch Akmal Almagribi.
-                  </p>
-                </div>
-              </div>
-              <footer class="px-5 sm:px-6 pb-5 sm:pb-6">
-                <div class="flex gap-2 flex-wrap">
-                  <span
-                    class="px-2 py-1 bg-slate-100 dark:bg-slate-700 text-xs rounded"
-                    >Dokumentasi</span
-                  >
-                  <span
-                    class="px-2 py-1 bg-slate-100 dark:bg-slate-700 text-xs rounded"
-                    >Activities</span
-                  >
-                </div>
-              </footer>
-            </article>
           </div>
         </div>
-      </section>
 
-      <!-- CONTACT SECTION -->
-      <section id="contact" class="py-16 sm:py-20 px-4 sm:px-6">
-        <div class="max-w-md mx-auto">
-          <header class="text-center mb-8 sm:mb-10" data-aos="fade-up">
-            <h2 class="text-2xl sm:text-3xl font-bold">Mari Berdiskusi</h2>
-            <p class="text-sm sm:text-base text-slate-500 mt-2">
-              Punya proyek menarik? Kirim pesan sekarang.
-            </p>
-          </header>
+        <!-- PROJECTS GRID -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- VIDEO 1: Computer Vision (Hand Gesture) -->
+          <div
+            class="project-card cv bg-white dark:bg-gray-900 rounded-xl overflow-hidden shadow-md hover:shadow-xl transition duration-300 border border-gray-200 dark:border-gray-800"
+            data-aos="fade-up"
+          >
+            <div class="relative bg-black aspect-video">
+              <video controls class="w-full h-full object-cover">
+                <source src="assets/videos/Hand Gesture.mp4" type="video/mp4" />
+                Browser Anda tidak mendukung pemutaran video.
+              </video>
+            </div>
+            <div class="p-6">
+              <span
+                class="text-xs font-semibold text-blue-600 dark:text-blue-400 uppercase tracking-wider"
+                >Computer Vision & AI</span
+              >
+              <h3 class="text-xl font-bold mt-2 mb-2">
+                Hand Gesture Recognition
+              </h3>
+              <p class="text-gray-600 dark:text-gray-400 text-sm">
+                Sistem pengenalan gestur tangan interaktif berbasis Machine
+                Learning secara real-time.
+              </p>
+            </div>
+          </div>
 
-          <form
-            id="contact-form"
-            action="https://formspree.io/f/xnpnaqqr"
-            method="POST"
-            class="space-y-4 sm:space-y-5"
+          <!-- VIDEO 2: Computer Vision (Driver Drowsiness) -->
+          <div
+            class="project-card cv bg-white dark:bg-gray-900 rounded-xl overflow-hidden shadow-md hover:shadow-xl transition duration-300 border border-gray-200 dark:border-gray-800"
             data-aos="fade-up"
             data-aos-delay="100"
           >
-            <div>
-              <label for="name" class="block text-sm font-medium mb-2"
-                >Nama Anda</label
-              >
-              <input
-                type="text"
-                id="name"
-                name="name"
-                required
-                placeholder="Masukkan nama Anda"
-                class="w-full px-4 py-3 rounded-xl bg-slate-100 dark:bg-slate-800 border-none focus:ring-2 focus:ring-indigo-500 outline-none transition"
-              />
+            <div class="relative bg-black aspect-video">
+              <video controls class="w-full h-full object-cover">
+                <source
+                  src="assets/videos/Driver Drowsiness Detection System.mp4"
+                  type="video/mp4"
+                />
+                Browser Anda tidak mendukung pemutaran video.
+              </video>
             </div>
-            <div>
-              <label for="email" class="block text-sm font-medium mb-2"
-                >Email Anda</label
+            <div class="p-6">
+              <span
+                class="text-xs font-semibold text-blue-600 dark:text-blue-400 uppercase tracking-wider"
+                >Computer Vision & AI</span
               >
-              <input
-                type="email"
-                id="email"
-                name="email"
-                required
-                placeholder="nama@email.com"
-                class="w-full px-4 py-3 rounded-xl bg-slate-100 dark:bg-slate-800 border-none focus:ring-2 focus:ring-indigo-500 outline-none transition"
-              />
+              <h3 class="text-xl font-bold mt-2 mb-2">
+                Driver Drowsiness Detection
+              </h3>
+              <p class="text-gray-600 dark:text-gray-400 text-sm">
+                Sistem pendeteksi rasa kantuk pengemudi mobil otomatis untuk
+                keselamatan berkendara.
+              </p>
             </div>
-            <div>
-              <label for="message" class="block text-sm font-medium mb-2"
-                >Pesan</label
-              >
-              <textarea
-                id="message"
-                name="message"
-                rows="4"
-                required
-                placeholder="Tuliskan pesan Anda di sini..."
-                class="w-full px-4 py-3 rounded-xl bg-slate-100 dark:bg-slate-800 border-none focus:ring-2 focus:ring-indigo-500 outline-none transition"
-              ></textarea>
-            </div>
-            <button
-              type="submit"
-              id="submit-btn"
-              class="w-full py-3 bg-indigo-600 text-white font-medium rounded-xl hover:bg-indigo-700 transition shadow-lg shadow-indigo-600/10 active:scale-95"
-            >
-              Kirim Pesan
-            </button>
+          </div>
 
+          <!-- VIDEO 3: Computer Vision (Object Detection) -->
+          <div
+            class="project-card cv bg-white dark:bg-gray-900 rounded-xl overflow-hidden shadow-md hover:shadow-xl transition duration-300 border border-gray-200 dark:border-gray-800"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
+            <div class="relative bg-black aspect-video">
+              <video controls class="w-full h-full object-cover">
+                <source
+                  src="assets/videos/Object Detection and Alert System.mp4"
+                  type="video/mp4"
+                />
+                Browser Anda tidak mendukung pemutaran video.
+              </video>
+            </div>
+            <div class="p-6">
+              <span
+                class="text-xs font-semibold text-blue-600 dark:text-blue-400 uppercase tracking-wider"
+                >Computer Vision & AI</span
+              >
+              <h3 class="text-xl font-bold mt-2 mb-2">
+                Object Detection & Alert System
+              </h3>
+              <p class="text-gray-600 dark:text-gray-400 text-sm">
+                Sistem deteksi objek otomatis dilengkapi fitur alarm peringatan
+                keamanan dini.
+              </p>
+            </div>
+          </div>
+
+          <!-- WEBSITE PROJECT: Gemini-MathSolver -->
+          <div
+            class="project-card web bg-white dark:bg-gray-900 rounded-xl overflow-hidden shadow-md hover:shadow-xl transition duration-300 border border-gray-200 dark:border-gray-800"
+            data-aos="fade-up"
+          >
             <div
-              id="form-status"
-              class="hidden text-center text-sm p-3 rounded-xl"
-            ></div>
-          </form>
+              class="aspect-video bg-gray-200 dark:bg-gray-800 overflow-hidden"
+            >
+              <img
+                src="assets/images/website-preview.jpg"
+                alt="Gemini-MathSolver Website Preview"
+                class="w-full h-full object-cover hover:scale-105 transition duration-500"
+              />
+            </div>
+            <div class="p-6">
+              <span
+                class="text-xs font-semibold text-emerald-600 dark:text-emerald-400 uppercase tracking-wider"
+                >Web Application</span
+              >
+              <h3 class="text-xl font-bold mt-2 mb-2">Gemini-MathSolver</h3>
+              <p class="text-gray-600 dark:text-gray-400 text-sm">
+                Aplikasi web pemecah matematika berbasis AI kecerdasan buatan
+                Gemini API.
+              </p>
+            </div>
+          </div>
+
+          <!-- PERSONAL PHOTOS (1 - 5) -->
+          <div
+            class="project-card personal bg-white dark:bg-gray-900 rounded-xl overflow-hidden shadow-md hover:shadow-xl transition duration-300 border border-gray-200 dark:border-gray-800"
+            data-aos="fade-up"
+          >
+            <div
+              class="aspect-square bg-gray-200 dark:bg-gray-800 overflow-hidden"
+            >
+              <img
+                src="assets/images/foto1.jpg"
+                alt="Foto Personal 1"
+                class="w-full h-full object-cover hover:scale-105 transition duration-500"
+              />
+            </div>
+            <div class="p-4 text-center">
+              <p class="text-sm font-medium">Galeri Personal 1</p>
+            </div>
+          </div>
+
+          <div
+            class="project-card personal bg-white dark:bg-gray-900 rounded-xl overflow-hidden shadow-md hover:shadow-xl transition duration-300 border border-gray-200 dark:border-gray-800"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            <div
+              class="aspect-square bg-gray-200 dark:bg-gray-800 overflow-hidden"
+            >
+              <img
+                src="assets/images/foto2.jpg"
+                alt="Foto Personal 2"
+                class="w-full h-full object-cover hover:scale-105 transition duration-500"
+              />
+            </div>
+            <div class="p-4 text-center">
+              <p class="text-sm font-medium">Galeri Personal 2</p>
+            </div>
+          </div>
+
+          <div
+            class="project-card personal bg-white dark:bg-gray-900 rounded-xl overflow-hidden shadow-md hover:shadow-xl transition duration-300 border border-gray-200 dark:border-gray-800"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
+            <div
+              class="aspect-square bg-gray-200 dark:bg-gray-800 overflow-hidden"
+            >
+              <img
+                src="assets/images/foto3.jpg"
+                alt="Foto Personal 3"
+                class="w-full h-full object-cover hover:scale-105 transition duration-500"
+              />
+            </div>
+            <div class="p-4 text-center">
+              <p class="text-sm font-medium">Galeri Personal 3</p>
+            </div>
+          </div>
+
+          <div
+            class="project-card personal bg-white dark:bg-gray-900 rounded-xl overflow-hidden shadow-md hover:shadow-xl transition duration-300 border border-gray-200 dark:border-gray-800"
+            data-aos="fade-up"
+          >
+            <div
+              class="aspect-square bg-gray-200 dark:bg-gray-800 overflow-hidden"
+            >
+              <img
+                src="assets/images/foto4.jpg"
+                alt="Foto Personal 4"
+                class="w-full h-full object-cover hover:scale-105 transition duration-500"
+              />
+            </div>
+            <div class="p-4 text-center">
+              <p class="text-sm font-medium">Galeri Personal 4</p>
+            </div>
+          </div>
+
+          <div
+            class="project-card personal bg-white dark:bg-gray-900 rounded-xl overflow-hidden shadow-md hover:shadow-xl transition duration-300 border border-gray-200 dark:border-gray-800"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            <div
+              class="aspect-square bg-gray-200 dark:bg-gray-800 overflow-hidden"
+            >
+              <img
+                src="assets/images/foto5.jpg"
+                alt="Foto Personal 5"
+                class="w-full h-full object-cover hover:scale-105 transition duration-500"
+              />
+            </div>
+            <div class="p-4 text-center">
+              <p class="text-sm font-medium">Galeri Personal 5</p>
+            </div>
+          </div>
         </div>
-      </section>
-    </main>
+      </div>
+    </section>
+
+    <!-- CONTACT SECTION (FORMSPREE VIA AJAX) -->
+    <section id="contact" class="py-20 px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto">
+      <div class="text-center mb-12" data-aos="fade-up">
+        <h2 class="text-3xl font-bold sm:text-4xl mb-4">Mari Berdiskusi</h2>
+        <p class="text-gray-600 dark:text-gray-400">
+          Punya proyek menarik atau tawaran kolaborasi? Silakan kirim pesan di
+          bawah ini.
+        </p>
+      </div>
+
+      <form
+        id="contact-form"
+        action="https://formspree.io/f/xnpnaqqr"
+        method="POST"
+        class="bg-white dark:bg-gray-900 p-8 rounded-2xl shadow-lg border border-gray-200 dark:border-gray-800 space-y-6"
+        data-aos="fade-up"
+      >
+        <div>
+          <label for="name" class="block text-sm font-medium mb-2"
+            >Nama Lengkap</label
+          >
+          <input
+            type="text"
+            id="name"
+            name="name"
+            required
+            class="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 focus:ring-2 focus:ring-blue-500 focus:outline-none transition"
+          />
+        </div>
+        <div>
+          <label for="email" class="block text-sm font-medium mb-2"
+            >Alamat Email</label
+          >
+          <input
+            type="email"
+            id="email"
+            name="email"
+            required
+            class="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 focus:ring-2 focus:ring-blue-500 focus:outline-none transition"
+          />
+        </div>
+        <div>
+          <label for="message" class="block text-sm font-medium mb-2"
+            >Pesan Anda</label
+          >
+          <textarea
+            id="message"
+            name="message"
+            rows="5"
+            required
+            class="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 focus:ring-2 focus:ring-blue-500 focus:outline-none transition"
+          ></textarea>
+        </div>
+
+        <button
+          type="submit"
+          id="submit-btn"
+          class="w-full py-4 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-lg shadow-md hover:shadow-lg transition duration-300 flex items-center justify-center gap-2"
+        >
+          <span>Kirim Pesan</span>
+          <i class="fas fa-paper-plane"></i>
+        </button>
+
+        <!-- Status Alerts -->
+        <div
+          id="form-status"
+          class="hidden p-4 rounded-lg text-center font-medium"
+        ></div>
+      </form>
+    </section>
 
     <!-- FOOTER -->
     <footer
-      class="py-8 border-t border-slate-200 dark:border-slate-800 text-center text-xs sm:text-sm text-slate-500"
+      class="border-t border-gray-200 dark:border-gray-800 py-8 text-center text-sm text-gray-500"
     >
-      <p>&copy; 2026 Moch Akmal Almagribi. Licensed under MIT.</p>
+      <p>&copy; 2026 Moch Akmal Almagribi. Hak Cipta Dilindungi.</p>
     </footer>
 
-    <!-- AOS ANIMATION SCRIPT -->
+    <!-- INTERACTIVE JAVASCRIPT & AOS -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-      AOS.init({ once: true });
+      // Inisialisasi Animations
+      AOS.init({
+        duration: 800,
+        once: true,
+      });
 
-      // Logika Filter Opsi Projek
-      function filterProjects(category) {
-        const cards = document.querySelectorAll(".project-card");
-        const buttons = document.querySelectorAll(".filter-btn");
+      // Toggle Mobile Menu
+      const mobileMenuBtn = document.getElementById("mobile-menu-btn");
+      const mobileMenu = document.getElementById("mobile-menu");
+      mobileMenuBtn.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+      });
 
-        buttons.forEach((btn) => {
-          if (btn.getAttribute("data-filter") === category) {
-            btn.classList.add("bg-indigo-600", "text-white");
-            btn.classList.remove(
-              "bg-white",
-              "dark:bg-slate-800",
-              "text-slate-700",
-              "dark:text-slate-300",
-            );
-          } else {
-            btn.classList.remove("bg-indigo-600", "text-white");
-            btn.classList.add(
-              "bg-white",
-              "dark:bg-slate-800",
-              "text-slate-700",
-              "dark:text-slate-300",
-            );
-          }
-        });
+      // Toggle Dark Mode Logic
+      const themeToggleBtn = document.getElementById("theme-toggle");
+      const themeToggleDarkIcon = document.getElementById(
+        "theme-toggle-dark-icon",
+      );
+      const themeToggleLightIcon = document.getElementById(
+        "theme-toggle-light-icon",
+      );
 
-        cards.forEach((card) => {
-          if (category === "all" || card.classList.contains(category)) {
-            card.style.display = "flex";
-          } else {
-            card.style.display = "none";
-          }
-        });
+      const themeToggleBtnMobile = document.getElementById(
+        "theme-toggle-mobile",
+      );
+      const themeToggleDarkIconMobile = document.getElementById(
+        "theme-toggle-dark-icon-mobile",
+      );
+      const themeToggleLightIconMobile = document.getElementById(
+        "theme-toggle-light-icon-mobile",
+      );
+
+      if (
+        localStorage.getItem("color-theme") === "dark" ||
+        (!("color-theme" in localStorage) &&
+          window.matchMedia("(prefers-color-scheme: dark)").matches)
+      ) {
+        document.documentElement.classList.add("dark");
+        themeToggleLightIcon.classList.remove("hidden");
+        themeToggleLightIconMobile.classList.remove("hidden");
+      } else {
+        document.documentElement.classList.remove("dark");
+        themeToggleDarkIcon.classList.remove("hidden");
+        themeToggleDarkIconMobile.classList.remove("hidden");
       }
 
-      // Pengiriman Formspree via AJAX (Tanpa Error Form Not Found)
+      function toggleTheme() {
+        themeToggleDarkIcon.classList.toggle("hidden");
+        themeToggleLightIcon.classList.toggle("hidden");
+        themeToggleDarkIconMobile.classList.toggle("hidden");
+        themeToggleLightIconMobile.classList.toggle("hidden");
+
+        if (document.documentElement.classList.contains("dark")) {
+          document.documentElement.classList.remove("dark");
+          localStorage.setItem("color-theme", "light");
+        } else {
+          document.documentElement.classList.add("dark");
+          localStorage.setItem("color-theme", "dark");
+        }
+      }
+
+      themeToggleBtn.addEventListener("click", toggleTheme);
+      themeToggleBtnMobile.addEventListener("click", toggleTheme);
+
+      // Project Filtering Logic
+      const filterBtns = document.querySelectorAll(".filter-btn");
+      const projectCards = document.querySelectorAll(".project-card");
+
+      filterBtns.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          filterBtns.forEach((b) => {
+            b.classList.remove("bg-blue-600", "text-white", "active");
+            b.classList.add("bg-white", "dark:bg-gray-900");
+          });
+          btn.classList.add("bg-blue-600", "text-white", "active");
+          btn.classList.remove("bg-white", "dark:bg-gray-900");
+
+          const filterValue = btn.getAttribute("data-filter");
+
+          projectCards.forEach((card) => {
+            if (filterValue === "all" || card.classList.contains(filterValue)) {
+              card.style.display = "block";
+            } else {
+              card.style.display = "none";
+            }
+          });
+        });
+      });
+
+      // Formspree AJAX Submission Logic
       const form = document.getElementById("contact-form");
-      const statusDiv = document.getElementById("form-status");
+      const status = document.getElementById("form-status");
       const submitBtn = document.getElementById("submit-btn");
 
-      form.addEventListener("submit", async function (e) {
-        e.preventDefault();
-        const data = new FormData(form);
+      async function handleSubmit(event) {
+        event.preventDefault();
+        const data = new FormData(event.target);
         submitBtn.disabled = true;
-        submitBtn.innerText = "Mengirim...";
+        submitBtn.innerHTML = `<span>Mengirim...</span> <i class="fas fa-spinner fa-spin"></i>`;
 
-        try {
-          const response = await fetch(form.action, {
-            method: form.method,
-            body: data,
-            headers: { Accept: "application/json" },
+        fetch(event.target.action, {
+          method: form.method,
+          body: data,
+          headers: {
+            Accept: "application/json",
+          },
+        })
+          .then((response) => {
+            if (response.ok) {
+              status.classList.remove("hidden", "bg-red-100", "text-red-700");
+              status.classList.add("bg-green-100", "text-green-700");
+              status.innerHTML =
+                "Terima kasih! Pesan Anda telah berhasil terkirim.";
+              form.reset();
+            } else {
+              response.json().then((data) => {
+                if (Object.hasOwn(data, "errors")) {
+                  status.innerHTML = data["errors"]
+                    .map((error) => error["message"])
+                    .join(", ");
+                } else {
+                  status.innerHTML =
+                    "Oops! Terjadi masalah saat mengirim pesan Anda.";
+                }
+              });
+              status.classList.remove(
+                "hidden",
+                "bg-green-100",
+                "text-green-700",
+              );
+              status.classList.add("bg-red-100", "text-red-700");
+            }
+          })
+          .catch((error) => {
+            status.classList.remove("hidden", "bg-green-100", "text-green-700");
+            status.classList.add("bg-red-100", "text-red-700");
+            status.innerHTML =
+              "Oops! Ada kendala koneksi internet saat mengirim pesan.";
+          })
+          .finally(() => {
+            submitBtn.disabled = false;
+            submitBtn.innerHTML = `<span>Kirim Pesan</span> <i class="fas fa-paper-plane"></i>`;
           });
-
-          if (response.ok) {
-            statusDiv.classList.remove(
-              "hidden",
-              "bg-red-100",
-              "text-red-700",
-              "dark:bg-red-900/40",
-              "dark:text-red-300",
-            );
-            statusDiv.classList.add(
-              "bg-green-100",
-              "text-green-700",
-              "dark:bg-green-900/40",
-              "dark:text-green-300",
-            );
-            statusDiv.innerText =
-              "Terima kasih! Pesan Anda telah berhasil terkirim langsung ke email Moch Akmal Almagribi.";
-            form.reset();
-          } else {
-            statusDiv.classList.remove(
-              "hidden",
-              "bg-green-100",
-              "text-green-700",
-              "dark:bg-green-900/40",
-              "dark:text-green-300",
-            );
-            statusDiv.classList.add(
-              "bg-red-100",
-              "text-red-700",
-              "dark:bg-red-900/40",
-              "dark:text-red-300",
-            );
-            statusDiv.innerText =
-              "Gagal mengirim pesan. Silakan periksa data Anda.";
-          }
-        } catch (error) {
-          statusDiv.classList.remove(
-            "hidden",
-            "bg-green-100",
-            "text-green-700",
-            "dark:bg-green-900/40",
-            "dark:text-green-300",
-          );
-          statusDiv.classList.add(
-            "bg-red-100",
-            "text-red-700",
-            "dark:bg-red-900/40",
-            "dark:text-red-300",
-          );
-          statusDiv.innerText =
-            "Terjadi kesalahan jaringan. Silakan coba lagi.";
-        } finally {
-          submitBtn.disabled = false;
-          submitBtn.innerText = "Kirim Pesan";
-        }
-      });
+      }
+      form.addEventListener("submit", handleSubmit);
     </script>
-
-    <script src="app.js"></script>
   </body>
 </html>

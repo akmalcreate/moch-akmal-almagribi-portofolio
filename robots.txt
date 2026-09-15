@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# Lokasi file sitemap Anda
+Sitemap: https://akmalcreate.github.io/moch-akmal-almagribi-portofolio/sitemap.xml
